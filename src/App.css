@@ -1,0 +1,90 @@
+.formImage,.form1,#play,#pause,#reset,.fromtext,.text,.scroll {
+  position: absolute;
+ }
+ .row{
+   align-content: center;
+   height: 260px;
+   width: 700px;
+ }
+ .fromtext{
+  margin-left: 3px;
+  margin-top: 16px;
+ }
+ .fontext{
+  display: block;
+ }
+ .text { 
+  margin-top: 15px;
+  margin-left: 110px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 0;
+}
+.scroll{
+  display:block;
+  border: 1px solid inherit;
+  padding:5px;
+  margin-top:5px;
+  width:650px;
+  height:130px;
+  overflow-y:scroll;
+}
+.inlinetext{
+  line-height: 0.1;
+}
+.color{
+  color: rgb(141, 15, 15);
+  display: inline-block;
+}
+#image2{
+  display: none;
+}
+#image1{
+  display:block;
+}
+ #play{
+  margin-left: 120px;
+  margin-top: 225px;
+  background-color: inherit;
+ }
+ #pause{
+  margin-left: 120px;
+  margin-top: 225px;
+  background-color: inherit;
+  display:none;
+ }
+ #reset{
+  margin-left: 310px;
+  margin-top: 225px;
+  background-color: inherit;
+ }
+.form{
+  background-color: #fff;
+  flex-wrap: wrap;
+  box-shadow: '0 10px 15px 0 #ccc';
+  flex-direction:inherit;
+  justify-content: space-around;
+}
+.formImage {
+  width: 258.78px;
+  height: 193.39px;
+  margin-left: 100px;
+  margin-top: 50px;
+  background-color:inherit;
+}
+.form1 {
+  width: 219px;
+  height: 155px;
+  margin-left: 133px;
+  margin-top: 62px;
+  background-color: inherit;
+}
+.input{
+  width: 150px;
+  height: 33px;
+}
+body {
+  height: 80vh;
+  width: 700px;
+  margin: 20px;
+}
