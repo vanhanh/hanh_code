@@ -1,8 +1,9 @@
 //import React from 'react'; 
 import './App.css';
-import React, {useState} from 'react';
+//import React, {useState} from 'react';
+//import Progress from 'react-progressbar';
 
-const Game=()=>{
+const ConvertFlashtoReact=()=>{
   return(
     <div className="form">
       <ContentForm/>
@@ -13,13 +14,25 @@ const Game=()=>{
 const ContentForm=()=>{
 
 const audioTune = new Audio('./sounds/150.mp3');
-const [seconds,setTimer] = useState(0);
+//const [seconds,setTimer] = useState(0);
+//const [isActive,setActive] = useState(false);
 
-const startTimer = () => {
-  const interval = setInterval(() => {
-    setTimer(seconds => seconds + 1);
-  }, 1000);
-};
+/*const startTimer = () => {
+     const interval = setInterval(() => {
+      if(!isActive)
+      {
+        setTimer(seconds => seconds + 1);
+      }
+      else clearInterval(interval);
+    }, 1000);
+}
+
+const progressbar=()=>{
+  return(
+      <Progress completed={seconds} />
+  );
+}
+*/
 
 /*const changeImage=()=>{
   startTimer();
@@ -34,6 +47,7 @@ const startTimer = () => {
 }*/
 const playSound = () => {
     audioTune.play();
+    //startTimer();
     return(
       document.getElementById("play").style.display = "none",
       document.getElementById("pause").style.display = "block"
@@ -42,7 +56,7 @@ const playSound = () => {
 
 const pauseSound = () => {
   audioTune.pause();
-  clearInterval(seconds);
+  //setActive(false);
   return(
     document.getElementById("play").style.display = "block",
     document.getElementById("pause").style.display = "none"
@@ -75,18 +89,19 @@ const conTentText = () => {
   return(
     <div>
       <div className="row">
-        <div className="formImage"><img src="./shapes/122.svg"/></div>
-        <div className="form1" id="image1"><img src="./images/144.jpg"/></div>
-        <div id="play"><img src="./buttons/1.png" onClick ={playSound}/></div>
-        <div id="pause"><img src="./buttons/3.png" onClick ={pauseSound}/></div>
-        <div id="reset" > <img src="./buttons/2.png" onClick ={ResetSound}/></div>
+        <div className="formImage"><img alt="khung" src="./shapes/122.svg"/></div>
+        <div className="form1" id="image1"><img alt="Image1" src="./images/144.jpg"/></div>
+        <div id="play"><img alt="ImageBT1" src="./buttons/1.png" onClick ={playSound}/></div>
+        <div id="pause"><img alt="ImageBT3" src="./buttons/3.png" onClick ={pauseSound}/></div>
+        <div id="reset" > <img alt="ImageBT2" src="./buttons/2.png" onClick ={ResetSound}/></div>
       </div>
       <div className="row">
-        <div className="fromtext" ><img src="./images/119.png"/></div>
+        <div className="fromtext" ><img alt="ImageFormText" src="./images/119.png"/></div>
         <div className="scroll">{conTentText()}</div>
-        <div className="fontext" ><img src="./images/116.jpg"/></div> 
+        <div className="fontext" ><img img alt="ImageFonText" src="./images/116.jpg"/></div> 
       </div>
     </div>
   );
 }
-export default Game;
+
+export default ConvertFlashtoReact;

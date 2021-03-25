@@ -1,6 +1,12 @@
-.formImage,.form1,#play,#pause,#reset,.fromtext,.text,.scroll {
+.formImage,.form1,#play,#pause,#reset,.fromtext,.text,.scroll,.progressbar {
   position: absolute;
  }
+ .progressbar{
+  margin-left: 162px;
+  margin-top: 228px;
+  width: 140px;
+ }
+
  .row{
    align-content: center;
    height: 260px;
