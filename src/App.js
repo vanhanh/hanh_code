@@ -97,8 +97,7 @@ const conTentText = () => {
       </div>
       <div className="row">
         <div className="fromtext" ><img alt="ImageFormText" src="./images/119.png"/></div>
-        <div className="scroll">{conTentText()}</div>
-        <div className="fontext" ><img img alt="ImageFonText" src="./images/116.jpg"/></div> 
+        <div className="scroll">{conTentText()}</div> 
       </div>
     </div>
   );
