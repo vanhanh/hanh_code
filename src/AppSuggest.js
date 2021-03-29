@@ -1,4 +1,5 @@
 //import React from 'react';
+import React, { useEffect, useState } from "react";
 import "./App.css";
 //import React, {useState} from 'react';
 //import Progress from 'react-progressbar';
@@ -12,7 +13,8 @@ const ConvertFlashtoReact = () => {
 };
 
 const ContentForm = () => {
-  const audioTune = new Audio("./sounds/150.mp3");
+  const [audioTune] = useState(new Audio("./sounds/150.mp3"));
+  const [playing, setPlaying] = useState(false);
   //const [seconds,setTimer] = useState(0);
   //const [isActive,setActive] = useState(false);
 
@@ -44,25 +46,21 @@ const progressbar=()=>{
     }
 
 }*/
-  // !!! You have to use state to change visibility because it is React not raw Javascript.
-  // Please see AppSuggest.js to see how to use state.
   const playSound = () => {
-    audioTune.play();
-    //startTimer();
-    return (
-      (document.getElementById("play").style.display = "none"),
-      (document.getElementById("pause").style.display = "block")
-    );
+    setPlaying(true);
   };
 
   const pauseSound = () => {
-    audioTune.pause();
-    //setActive(false);
-    return (
-      (document.getElementById("play").style.display = "block"),
-      (document.getElementById("pause").style.display = "none")
-    );
+    setPlaying(false);
   };
+
+  useEffect(() => {
+    if (playing) {
+      audioTune.play();
+    } else {
+      audioTune.pause();
+    }
+  }, [audioTune, playing]);
 
   // !!! start with lower case because it is event.
   const ResetSound = () => {
@@ -107,10 +105,10 @@ const progressbar=()=>{
         <div className="form1" id="image1">
           <img alt="Image1" src="./images/144.jpg" />
         </div>
-        <div id="play">
+        <div id="play" style={{ display: playing ? "none" : "block" }}>
           <img alt="ImageBT1" src="./buttons/1.png" onClick={playSound} />
         </div>
-        <div id="pause">
+        <div id="pause" style={{ display: playing ? "block" : "none" }}>
           <img alt="ImageBT3" src="./buttons/3.png" onClick={pauseSound} />
         </div>
         <div id="reset">
