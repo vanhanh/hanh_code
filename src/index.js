@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //import './index.css';
-import Game from './App';
+import ConvertFlashtoReact from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Game/>
+    <ConvertFlashtoReact/>
   </React.StrictMode>,
   document.getElementById('root')
 );

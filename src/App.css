@@ -1,6 +1,15 @@
-.formImage,.form1,#play,#pause,#reset,.fromtext,.text,.scroll {
+.formImage,.form1,#play,#pause,#reset,.fromtext,.text,.scroll,.progressbar {
   position: absolute;
  }
+ .progressbar{
+  margin-left: 162px;
+  margin-top: 228px;
+  width: 140px;
+ }
+p{
+  margin-block-start: 0.2em !important;
+  margin-block-end: 0em !important;
+}
  .row{
    align-content: center;
    height: 260px;
@@ -8,26 +17,23 @@
  }
  .fromtext{
   margin-left: 3px;
-  margin-top: 16px;
  }
  .fontext{
   display: block;
  }
  .text { 
-  margin-top: 15px;
   margin-left: 110px;
   font-size: 0.7rem;
   font-weight: 700;
-  line-height: 0;
+  line-height: 2em;
 }
 .scroll{
-  display:block;
+  display: block;
   border: 1px solid inherit;
-  padding:5px;
-  margin-top:5px;
-  width:650px;
-  height:130px;
-  overflow-y:scroll;
+  margin-top: 17px;
+  width: 653px;
+  height: 114px;
+  overflow-y: scroll;
 }
 .inlinetext{
   line-height: 0.1;
@@ -64,6 +70,10 @@
   box-shadow: '0 10px 15px 0 #ccc';
   flex-direction:inherit;
   justify-content: space-around;
+  width: 650px;
+  height: 390px;
+  border: 1px solid #333;
+  padding: 10px;
 }
 .formImage {
   width: 258.78px;
